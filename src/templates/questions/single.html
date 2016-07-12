@@ -22,7 +22,7 @@
 Importance: {{form.importance_level}}
 <h3>Your coworker's ideal answer</h3>
 	{% for answer in instance.answer_set.all %}
-	<input type="radio" name='their_answer_id' value='{{answer.id}}'  {% if user_answer.their_answer.id == answer.id %}checked=checked {% endif%} />{{answer.text}} <br/>
+	<input type="radio" name='their_answer_id ' value='{{answer.id}}'  {% if user_answer.their_answer.id == answer.id %}checked=checked {% endif%} />{{answer.text}} <br/>
 	{% endfor %}
 	<input type="radio" name='their_answer_id' value='-1' {% if not user_answer.their_answer %}checked=checked{%endif%}/>Holds no importance <br/>
 <br>
