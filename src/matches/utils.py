@@ -9,8 +9,8 @@ from django.db.models import Q
 # users = User.objects.all() #[user1 ,user2]
 # all_user_answers = UserAnswer.objects.all().order_by("user_id")
 
-
-def get_match(user_a, user_b): 
+   
+def get_match(user_a, user_b):
     q1 = Q(useranswer__user=user_a)
     q2 = Q(useranswer__user=user_b)
     # question_set = Question.objects.filter(q1 | q2).distinct()
